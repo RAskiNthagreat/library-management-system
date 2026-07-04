@@ -53,7 +53,12 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     <td>
                         <a href="edit.php?id=<?= $book['id'] ?>">Edit</a> |
-                        <a href="delete.php?id=<?= $book['id'] ?>">Delete</a>
+                        <a
+                        href="delete.php?id=<?= $book['id'] ?>"
+                        onclick="return confirm('Are you sure you want to delete this book?');"
+                        >
+                        Delete
+                        </a>
                     </td>
 
                 </tr>
